@@ -1,8 +1,12 @@
 import React from "react";
+import FetchData from './FetchData';
+import FetchData1 from './FetchData1';
+import FetchData2 from './FetchData2';
+import { Routes, Route, Link } from 'react-router-dom';
 
 function Nav(props){
     const AppNav = {
-        backgroundColor:" #420c34",
+        backgroundColor:"#282c34",
         minHeight: "10vh",
         display: "flex",
         flexDirection: "column",
@@ -10,17 +14,25 @@ function Nav(props){
         justifyContent: "center",
         fontSize: "calc(10px + 2vmin)",
         color: "white",
+        listStyle: 'none'
       }
     return(
         <>
             <nav style={AppNav} className="main-nav">
                 <ul>
-                    <li style={{color:props.color}}>Home</li>
-                    <li>About  { 4< 5}</li>
-                    <li>Shop . {4/2}</li>
-                    <li>{7*2}</li>
+                    <li style={{color:props.color}}><Link to={'/movies'}>movies</Link></li>
+                    <li><Link to={'/tv'}>tv</Link>   </li>
+
+                    <li><Link to={'/persone'}>persone</Link>  </li>
+                    
                 </ul>
             </nav>
+
+           <Routes>
+            <Route path='/movies' element={<FetchData/>} />
+            <Route path='/tv' element={<FetchData1/>} />
+            <Route path='/persone' element={<FetchData2/>} />
+           </Routes>
         </>
     )
 }

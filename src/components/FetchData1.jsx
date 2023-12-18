@@ -5,7 +5,7 @@ const FetchData = () => {
   const [List, setList] = useState(1);
 
   const fetchMoviesData = () => {
-    fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d&page=${List}`)
+    fetch(`https://api.themoviedb.org/3/trending/tv/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d&page=${List}`)
       .then(response => response.json())
       .then(data => setMovies(data.results));
   };

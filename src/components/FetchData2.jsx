@@ -5,7 +5,7 @@ const FetchData = () => {
   const [List, setList] = useState(1);
 
   const fetchMoviesData = () => {
-    fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d&page=${List}`)
+    fetch(`https://api.themoviedb.org/3/trending/person/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d&page=${List}`)
       .then(response => response.json())
       .then(data => setMovies(data.results));
   };
@@ -35,8 +35,8 @@ const FetchData = () => {
       {movies.map((movie, index) => (
         <div key={index}>
           <h4>{movie.title}</h4>
-          <img src={'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/' + movie.poster_path} alt={movie.title} />
-          <p style={{ color: 'teal' }}>{movie.overview}</p>
+          <img src={'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/' + movie.profile_path} alt={movie.title} />
+          <p style={{ color: 'teal' }}>{movie.name}</p>
           
         </div>
       ))}

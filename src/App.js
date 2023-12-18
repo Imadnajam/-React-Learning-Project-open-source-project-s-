@@ -1,9 +1,11 @@
 import React from 'react'
-import FetchData from './components/FetchData'
+
+import Nav from './components/nav'
 const App = () => {
   return (
     <div>
-<FetchData/>
+    <Nav/>
+
     </div>
   )
 }
