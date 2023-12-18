@@ -1,0 +1,13 @@
+.main-nav{
+    display: flex;
+    background-color: rgb(2, 36, 46);
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+ 
+    width: 100%;
+    min-height: 20vh;
+  }
