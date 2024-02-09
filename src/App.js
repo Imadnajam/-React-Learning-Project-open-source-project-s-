@@ -1,24 +1,29 @@
-import React ,{useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './EFM/header'
 import './style/app.css'
 import axios from 'axios'
 
 const App = () => {
-  const [Livres,setLivres]=useState([])
-  useEffect(()=>{
+  const [Livres, setLivres] = useState([])
+  useEffect(() => {
     axios.get("https://openlibrary.org/dev/docs/api/books")
-    .then(response => {
-      setLivres(response.data);
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
+      .then(response => {
+        setLivres(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
 
-  },[])
+  }, [])
   return (
     <div>
-      <Header/>
-      
+      <Header />
+      <select>
+        <option> Science Fiction</option>
+        <option> Romance</option>
+        <option> Mystère</option>
+        <option> Fantasy</option>
+      </select>
     </div>
   )
 }
@@ -60,24 +65,24 @@ const App = () => {
         <button onClick={ChangeC} >Change the color</button><br />
         <button onClick={ChangeT} >Change the text</button>
         <ul>
-         <h2>Color  historique</h2> 
+         <h2>Color  historique</h2>
           {historiqueColor !== undefined && historiqueColor.length > 0 &&
             historiqueColor.map((e, k) => (
               <li key={k}>{e}</li>
             ))
           }
 
-          
+
         </ul><br/>
         <ul>
-         <h2>Text  historique</h2> 
+         <h2>Text  historique</h2>
           {historiqueText !== undefined && historiqueText.length > 0 &&
             historiqueText.map((e, k) => (
               <li key={k}>{e}</li>
             ))
           }
 
-          
+
         </ul>
 
       </div>
