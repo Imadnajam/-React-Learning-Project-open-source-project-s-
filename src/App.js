@@ -1,10 +1,24 @@
-import React from 'react'
+import React ,{useEffect, useState} from 'react'
 import Header from './EFM/header'
 import './style/app.css'
+import axios from 'axios'
+
 const App = () => {
+  const [Livres,setLivres]=useState([])
+  useEffect(()=>{
+    axios.get("https://openlibrary.org/dev/docs/api/books")
+    .then(response => {
+      setLivres(response.data);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+
+  },[])
   return (
     <div>
       <Header/>
+      
     </div>
   )
 }
