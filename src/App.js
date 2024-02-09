@@ -1,3 +1,19 @@
+import React from 'react'
+import Header from './EFM/header'
+import './style/app.css'
+const App = () => {
+  return (
+    <div>
+      <Header/>
+    </div>
+  )
+}
+
+export default App
+
+
+/*
+
 ///////////////////// Redux Test  3  MINI Game  Change my Color !////////////////////
 
 import React, { useState } from "react";

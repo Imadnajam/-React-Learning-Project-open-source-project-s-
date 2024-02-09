@@ -43,3 +43,12 @@ input {
 input:hover {
     border-color: #2980b9; /* Change border color on hover */
 }
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+}
