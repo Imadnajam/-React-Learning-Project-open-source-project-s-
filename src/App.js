@@ -6,12 +6,12 @@ import { useDispatch } from 'react-redux';
 
 const App = () => {
   const [Livres, setLivres] = useState([]);
-  const [item, setItem] = useState('');
+  const [item, setItem] = useState(1);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get("https://gutendex.com/books/?page=4")
+    axios.get(`https://gutendex.com/books/?page${item}`)
       .then(response => {
         setLivres(response.data['results']);
       })
@@ -19,7 +19,7 @@ const App = () => {
         console.error('Error fetching data:', error);
       });
 
-  }, []);
+  }, [item]);
 
   function addBook(ktab) {
     dispatch({ type: 'addBook', payload: ktab }); // Corrected payload naming
@@ -47,6 +47,9 @@ const App = () => {
           </div>
         ))}
       </div>
+      <button onClick={() => setItem(item - 1)}>Previous</button>
+      <button onClick={() => setItem(item + 1)}>Next</button>
+
     </div>
   );
 }
