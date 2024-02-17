@@ -1,16 +1,16 @@
-import {createStore} from 'redux'
+import { createStore } from 'redux';
 
-const initialState={}
-const reducer=(state=initialState,{type,payload})=>{
-    switch(type){
-        case 'add' :
-            return {}
-        break
-        default :
-        return state ;
+const initialState = { book: '', books: ['boite'] };
+
+const reducer = (state = initialState, { type, payload }) => {
+    switch (type) {
+        case 'addBook':
+            return { ...state, books: [...state.books, payload] }; // Spread the existing array and add the new book
+        default:
+            return state;
     }
+};
 
-}
+const store = createStore(reducer);
 
-const Store=createStore(reducer);
-export default Store
+export default store;

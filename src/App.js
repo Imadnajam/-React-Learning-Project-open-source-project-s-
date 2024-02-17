@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from './EFM/header';
-
 import axios from 'axios';
+import D from './EFM/detail'
 
 const App = () => {
   const [Livres, setLivres] = useState([]);
@@ -26,16 +26,16 @@ const App = () => {
         <option>Mystère</option>
         <option>Fantasy</option>
       </select>
-
+      <D />
       <div>
         {Livres.map((e, i) => (
           <div key={i} className='movie-card'>
-            
+
             <p>{e.title}</p>
             <figure className="card-banner">
-               <img src={e.formats['image/jpeg']} alt={e.title} />
+              <img src={e.formats['image/jpeg']} alt={e.title} />
             </figure>
-          
+            <button>Add to cart</button>
 
           </div>
         ))}
