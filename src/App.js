@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Header from './EFM/header';
 import axios from 'axios';
-import D from './EFM/detail'
+import D from './EFM/detail';
+import { useDispatch } from 'react-redux';
 
 const App = () => {
   const [Livres, setLivres] = useState([]);
+  
+  const dispatch = useDispatch();
 
   useEffect(() => {
     axios.get("https://gutendex.com/books/?page=4")
@@ -16,6 +19,10 @@ const App = () => {
       });
 
   }, []);
+
+  function addBook(ktab) {
+    dispatch({ type: 'addBook', payload: ktab }); // Corrected payload naming
+  }
 
   return (
     <div>
@@ -30,13 +37,11 @@ const App = () => {
       <div>
         {Livres.map((e, i) => (
           <div key={i} className='movie-card'>
-
             <p>{e.title}</p>
             <figure className="card-banner">
               <img src={e.formats['image/jpeg']} alt={e.title} />
             </figure>
-            <button>Add to cart</button>
-
+            <button onClick={() => addBook(e.title)}>Add to cart</button> {/* Fix onClick */}
           </div>
         ))}
       </div>

@@ -7,10 +7,7 @@ const Detail = () => {
   function removeBook() {
     dispatch({ type: 'removeBook', book :'r'})
   }
-  function addBook() {
-    dispatch({ type: 'addBook', book: 'r' })
-  }
-
+ 
   return (
     <div>
       {bookA.map((e, i) => (
