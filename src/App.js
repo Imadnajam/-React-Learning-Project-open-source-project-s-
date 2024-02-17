@@ -1,34 +1,47 @@
-import React, { useEffect, useState } from 'react'
-import Header from './EFM/header'
-import './style/app.css'
-import axios from 'axios'
+import React, { useEffect, useState } from 'react';
+import Header from './EFM/header';
+import './style/app.css';
+import axios from 'axios';
 
 const App = () => {
-  const [Livres, setLivres] = useState([])
+  const [Livres, setLivres] = useState([]);
+
   useEffect(() => {
-    axios.get("https://openlibrary.org/dev/docs/api/books")
+    axios.get("https://gutendex.com/books/?page=4")
       .then(response => {
-        setLivres(response.data);
+        setLivres(response.data['results']);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
       });
 
-  }, [])
+  }, []);
+
   return (
     <div>
       <Header />
       <select>
-        <option> Science Fiction</option>
-        <option> Romance</option>
-        <option> Mystère</option>
-        <option> Fantasy</option>
+        <option>Science Fiction</option>
+        <option>Romance</option>
+        <option>Mystère</option>
+        <option>Fantasy</option>
       </select>
+
+      <div>
+        {Livres.map((e, i) => (
+          <div key={i}>
+            <p>{e.title}</p>
+            <img src={e.formats['image/jpeg']} alt={e.title} />
+
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+
 
 
 /*
