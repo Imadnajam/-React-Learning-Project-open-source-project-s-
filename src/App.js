@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from './EFM/header';
-import './style/app.css';
+
 import axios from 'axios';
 
 const App = () => {
@@ -29,9 +29,13 @@ const App = () => {
 
       <div>
         {Livres.map((e, i) => (
-          <div key={i}>
+          <div key={i} className='movie-card'>
+            
             <p>{e.title}</p>
-            <img src={e.formats['image/jpeg']} alt={e.title} />
+            <figure className="card-banner">
+               <img src={e.formats['image/jpeg']} alt={e.title} />
+            </figure>
+          
 
           </div>
         ))}
