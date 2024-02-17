@@ -6,7 +6,8 @@ import { useDispatch } from 'react-redux';
 
 const App = () => {
   const [Livres, setLivres] = useState([]);
-  
+  const [item, setItem] = useState('');
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,6 +23,7 @@ const App = () => {
 
   function addBook(ktab) {
     dispatch({ type: 'addBook', payload: ktab }); // Corrected payload naming
+    setItem(ktab)
   }
 
   return (
@@ -33,7 +35,7 @@ const App = () => {
         <option>Mystère</option>
         <option>Fantasy</option>
       </select>
-      <D />
+     
       <div>
         {Livres.map((e, i) => (
           <div key={i} className='movie-card'>

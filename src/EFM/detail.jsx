@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 const Detail = () => {
   const bookA = useSelector(state => state.books);
   const dispatch = useDispatch();
-  function removeBook() {
-    dispatch({ type: 'removeBook', book :'r'})
+  function removeBook(item) {
+    dispatch({ type: 'removeBook', payload: item })
   }
  
   return (
@@ -15,7 +15,7 @@ const Detail = () => {
 
           <p>{e}</p>
         
-          <button onClick={removeBook}>Remove</button>
+          <button onClick={()=>removeBook(e)}>Remove</button>
 
         </div>
       ))}
