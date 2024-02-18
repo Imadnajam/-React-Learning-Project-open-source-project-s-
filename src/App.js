@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import Header from './EFM/header';
 import axios from 'axios';
-import D from './EFM/detail';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch } from 'react-redux';
 
 const App = () => {
-  const [Livres, setLivres] = useState([]);
+  const [livres, setLivres] = useState([]);
   const [item, setItem] = useState(1);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get(`https://gutendex.com/books/?page${item}`)
+    axios.get(`https://gutendex.com/books/?page=${item}`)
       .then(response => {
         setLivres(response.data['results']);
       })
@@ -22,39 +22,42 @@ const App = () => {
   }, [item]);
 
   function addBook(ktab) {
-    dispatch({ type: 'addBook', payload: ktab }); // Corrected payload naming
-    setItem(ktab)
+    dispatch({ type: 'addBook', payload: ktab });
   }
 
   return (
-    <div>
+    <div className="container">
       <Header />
-      <select>
+      <select className="form-select mb-3">
         <option>Science Fiction</option>
         <option>Romance</option>
         <option>Mystère</option>
         <option>Fantasy</option>
       </select>
-     
-      <div>
-        {Livres.map((e, i) => (
-          <div key={i} className='movie-card'>
-            <p>{e.title}</p>
-            <figure className="card-banner">
-              <img src={e.formats['image/jpeg']} alt={e.title} />
-            </figure>
-            <button onClick={() => addBook(e.title)}>Add to cart</button> {/* Fix onClick */}
+
+      <div className="row">
+        {livres.map((e) => (
+          <div key={e.id} className='col-md-3 mb-4'>
+            <div className="card">
+              <img src={e.formats['image/jpeg']} className="card-img-top" alt={e.title} />
+              <div className="card-body">
+                <h5 className="card-title">{e.title}</h5>
+                <button onClick={() => addBook(e)} className="btn btn-primary">Add to cart</button>
+              </div>
+            </div>
           </div>
         ))}
       </div>
-      <button onClick={() => setItem(item - 1)}>Previous</button>
-      <button onClick={() => setItem(item + 1)}>Next</button>
-
+      <div className="d-flex justify-content-between mt-3">
+        <button onClick={() => setItem(item - 1)} className="btn btn-secondary">Previous</button>
+        <button onClick={() => setItem(item + 1)} className="btn btn-secondary">Next</button>
+      </div>
     </div>
   );
 }
 
 export default App;
+
 
 
 
