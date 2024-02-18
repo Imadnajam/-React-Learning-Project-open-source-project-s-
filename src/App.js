@@ -42,7 +42,7 @@ const App = () => {
               <img src={e.formats['image/jpeg']} className="card-img-top" alt={e.title} />
               <div className="card-body">
                 <h5 className="card-title">{e.title}</h5>
-                <button onClick={() => addBook(e)} className="btn btn-primary">Add to cart</button>
+                <button onClick={() => addBook(e.title)} className="btn btn-primary">Add to cart</button>
               </div>
             </div>
           </div>
@@ -57,6 +57,100 @@ const App = () => {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

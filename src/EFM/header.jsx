@@ -1,25 +1,34 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import Detail from './detail.jsx';
 
 const Header = () => {
     return (
-        <div style={{backgroundColor:'teal'}}>
-            <h2 style={{textAlign:'center'}}> Bibliothèque</h2>
-            <div className='head'>
+        <>
+            <div className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="container">
+                    <Link to="/" className="navbar-brand">Bibliothèque</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <Link to="/" className="nav-link">Home</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/details" className="nav-link">Details</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-
-                <br />
-                <Link to={'/'}>Home</Link>
-                <Link to={'/details'}>Details</Link>
-                <Routes>
-                    <Route path='/' />
-                    <Route path='/details' element={<Detail />} />
-                </Routes>
             </div>
-        </div>
-
-    );
+            <Routes>
+                <Route path="/" />
+                <Route path="/details" element={<Detail />} />
+            </Routes>
+        </>);
 };
 
 export default Header;
