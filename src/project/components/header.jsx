@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, Link } from 'react-router-dom';
-import Actors from './actors';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import Fil from './films';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Header() {
     return (
@@ -15,7 +15,7 @@ export default function Header() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/actors">Actors</Link>
+                                <Link className="nav-link" to="/films">Films</Link>
                             </li>
                         </ul>
                     </div>
@@ -24,7 +24,7 @@ export default function Header() {
 
             <Routes>
                 <Route path="/" />
-                <Route path="/actors" element={<Actors />} />
+                <Route path="/films" element={<Fil />} />
             </Routes>
         </>
     )
