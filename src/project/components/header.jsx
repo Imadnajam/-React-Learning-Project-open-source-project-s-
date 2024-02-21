@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, Link } from 'react-router-dom';
 import Fil from './films';
+import Cart from "./cart";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Header() {
@@ -17,6 +18,9 @@ export default function Header() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/films">Films</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/cart">Cart</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -25,6 +29,7 @@ export default function Header() {
             <Routes>
                 <Route path="/" />
                 <Route path="/films" element={<Fil />} />
+                <Route path="/cart" element={<Cart />} />
             </Routes>
         </>
     )
