@@ -19,7 +19,7 @@ export default function Header() {
         
         <Routes>
                 <Route path="/" />
-                <Route path="/actor" element={Act}/>
+                <Route path="/actors" element={<Act/>}/>
         </Routes>
         </>
     )

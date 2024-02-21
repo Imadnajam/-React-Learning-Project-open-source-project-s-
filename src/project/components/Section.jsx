@@ -1,12 +1,11 @@
 import React from 'react'
 
-const Actors = () => {
+const Section = () => {
   return (
     <div>
       
-          <h1>hello</h1>
     </div>
   )
 }
 
-export default Actors
+export default Section

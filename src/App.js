@@ -1,3 +1,48 @@
+import React from 'react'
+import Pr from './project/components/header'
+
+const App = () => {
+  return (
+    <div>
+      <Pr/>
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+
+
 import React, { useEffect, useState } from 'react';
 import Header from './EFM/header';
 import axios from 'axios';
