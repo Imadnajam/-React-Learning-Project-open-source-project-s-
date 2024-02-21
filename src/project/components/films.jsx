@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useDispatch } from 'react-redux';
 
 
 const Films = () => {
@@ -11,6 +12,12 @@ const Films = () => {
             .then((response) => setfilms(response.data['results']));
     }, []);
 
+    const dispatch = useDispatch();
+    function addTOc(item) {
+        dispatch({ type: 'AddToCart', payload: item })
+
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -20,7 +27,7 @@ const Films = () => {
                             <img src={'https://media.themoviedb.org/t/p/w300_and_h450_bestv2/' + e.poster_path} className="card-img-top" alt={e.title} />
                             <div className="card-body">
                                 <h5 className="card-title">{e.title}</h5>
-                                <button variant="primary">Add to cart</button>
+                                <button variant="primary" onClick={addTOc(e.title)}>Add to cart</button>
                             </div>
                         </div>
                     </div>
