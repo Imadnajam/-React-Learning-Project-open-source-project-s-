@@ -27,7 +27,7 @@ const Films = () => {
                             <img src={'https://media.themoviedb.org/t/p/w300_and_h450_bestv2/' + e.poster_path} className="card-img-top" alt={e.title} />
                             <div className="card-body">
                                 <h5 className="card-title">{e.title}</h5>
-                                <button variant="primary" onClick={()=>addTOc(e)}>Add to cart</button>
+                                <button className="btn btn-success" onClick={()=>addTOc(e)}>Add to cart</button>
                             </div>
                         </div>
                     </div>
