@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios  from 'axios';
 
 export default function AXIOS() {
   const [users, setUsers] = useState([]);
@@ -6,9 +7,8 @@ export default function AXIOS() {
   const [listT, setListT] = useState([]);
 
   function AfficheU() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((response) => response.json())
-      .then((don) => setUsers(don));
+    axios.get('https://jsonplaceholder.typicode.com/users')
+      .then((response) => setUsers(response.data));
   }
 
   function AfficheT(e) {
