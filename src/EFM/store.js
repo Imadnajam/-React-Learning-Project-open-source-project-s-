@@ -5,7 +5,7 @@ const initialState = { book: '', books: ['boite'] };
 const reducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case 'addBook':
-            return { ...state, books: [...state.books, payload] }; // Spread the existing array and add the new book
+            return { ...state, books: [...state.books, payload] }; 
         case 'removeBook':
             return {...state,books: state.books.filter((e)=>e!==payload)}
             
