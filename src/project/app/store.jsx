@@ -1,4 +1,4 @@
-import { creatStore } from 'redux';
+import { createStore } from 'redux';
 
 const initialState = { Films: [] };
 const reducer = (state = initialState, { type, payload }) => {
@@ -14,5 +14,5 @@ const reducer = (state = initialState, { type, payload }) => {
 
 }
 
-const store = creatStore(reducer)
+const store = createStore(reducer)
 export default store;
