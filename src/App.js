@@ -1,5 +1,5 @@
 import React from 'react'
-import Pr from './project/components/header'
+import Pr from './project/components/Layout'
 
 const App = () => {
   return (
