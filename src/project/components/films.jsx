@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 
 const Films = () => {
     const [films, setfilms] = useState([]);
+    
 
     useEffect(() => {
         axios.get('https://api.themoviedb.org/3/trending/movie/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d')
@@ -33,6 +34,7 @@ const Films = () => {
                     </div>
                 ))}
             </div>
+            <button className="btn btn-primary">Previos</button><button className="btn btn-info">Next</button>
         </div>
     );
 }
