@@ -6,12 +6,31 @@ const Actors = () => {
     const [artist, setArtist] = useState([]);
     useEffect(() => {
         axios.get(`https://api.themoviedb.org/3/person/popular?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d`)
-    },[])
-  return (
-    <div>
-      
-    </div>
-  )
+            .then((response) => setArtist(response.data['results']))
+    }, [])
+    return (
+        <div>
+            <div className="container">
+                <div className="row">
+                    {
+                        artist.map((e, k) => (
+                            <div className="col-md-4 mb-4" key={k}>
+                                <div className="card">
+                                    <img src={'https://media.themoviedb.org/t/p/w300_and_h450_bestv2/' + e.profile_path} className="card-img-top" alt={e.title} />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{e.name}</h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                  
+              ))
+                    }
+
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default Actors
