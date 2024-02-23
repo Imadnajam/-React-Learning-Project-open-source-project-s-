@@ -1,13 +1,15 @@
 import { createStore } from 'redux';
 
-const initialState = { Films: [] };
+const initialState = { Films: [] ,Artists:[]};
 const reducer = (state = initialState, { type, payload }) => {
     
     switch (type) {
         case 'AddToCart':
             return { ...state, Films: [...state.Films, payload] };
         case 'removeItem':
-            return {...state,Films:[...state.Films.filter((e)=>e!==payload)]}
+            return { ...state, Films: [...state.Films.filter((e) => e !== payload)] }
+        case 'addActor':
+            return state
         
         default :
             return state;
