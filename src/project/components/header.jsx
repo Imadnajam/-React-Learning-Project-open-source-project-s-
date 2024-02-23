@@ -2,7 +2,9 @@ import React from "react";
 import { Routes, Route, Link } from 'react-router-dom';
 import Fil from './films';
 import Cart from "./cart";
+import Act from './actors'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function Header() {
     return (
@@ -19,6 +21,9 @@ export default function Header() {
                                 <Link className="nav-link" to="/films">Films</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className="nav-link" to='/actors' >Actors</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link" to="/cart">Cart</Link>
                             </li>
                         </ul>
@@ -30,6 +35,7 @@ export default function Header() {
                 <Route path="/" />
                 <Route path="/films" element={<Fil />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/actors" element={<Act/>} />
             </Routes>
         </>
     )
