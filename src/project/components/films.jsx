@@ -6,17 +6,22 @@ import { useDispatch } from 'react-redux';
 
 const Films = () => {
     const [films, setfilms] = useState([]);
-    
+    const [pageF,setPageF]=useState(1)
 
     useEffect(() => {
-        axios.get('https://api.themoviedb.org/3/trending/movie/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d')
+        axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d&page=${pageF}`)
             .then((response) => setfilms(response.data['results']));
-    }, []);
+    }, [pageF]);
 
     const dispatch = useDispatch();
     function addTOc(item) {
         dispatch({ type: 'AddToCart', payload: item })
 
+    }
+    function Previos() {
+        if (pageF >= 1) {
+            setPageF(pageF-1)
+        }
     }
 
     return (
@@ -34,7 +39,7 @@ const Films = () => {
                     </div>
                 ))}
             </div>
-            <button className="btn btn-primary">Previos</button><button className="btn btn-info">Next</button>
+            <button className="btn btn-primary" onClick={Previos}>Previos</button><button className="btn btn-info" onClick={()=>setPageF(pageF+1)}>Next</button>
         </div>
     );
 }
