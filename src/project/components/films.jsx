@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 
 const Films = () => {
     const [films, setfilms] = useState([]);
-    const [pageF,setPageF]=useState(1)
+    const [pageF, setPageF] = useState(1)
 
     useEffect(() => {
         axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d&page=${pageF}`)
@@ -20,7 +20,7 @@ const Films = () => {
     }
     function Previos() {
         if (pageF >= 1) {
-            setPageF(pageF-1)
+            setPageF(pageF - 1)
         }
     }
 
@@ -33,13 +33,18 @@ const Films = () => {
                             <img src={'https://media.themoviedb.org/t/p/w300_and_h450_bestv2/' + e.poster_path} className="card-img-top" alt={e.title} />
                             <div className="card-body">
                                 <h5 className="card-title">{e.title}</h5>
-                                <button className="btn btn-success" onClick={()=>addTOc(e)}>Add to cart</button>
+                                <button className="btn btn-success" onClick={() => addTOc(e)}>Add to cart</button>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
-            <button className="btn btn-primary" onClick={Previos}>Previos</button><button className="btn btn-info" onClick={()=>setPageF(pageF+1)}>Next</button>
+            <div className="container">
+                <div className="text-center">
+                    <button className="btn btn-primary mr-2" onClick={Previos}>Previous</button>
+                    <button className="btn btn-info" onClick={() => setPageF(pageF + 1)}>Next</button>
+                </div>
+            </div>
         </div>
     );
 }

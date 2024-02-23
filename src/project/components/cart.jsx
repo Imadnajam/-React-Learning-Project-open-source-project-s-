@@ -12,7 +12,7 @@ const Cart = () => {
         <div>
             <div className="container">
                 <div className="row">
-                    <h2>Films</h2>
+                    <h2 class="text-center mt-4 mb-4">Films</h2>
                     {items && items.map((e, k) => (
                         <div className="col-md-4 mb-4" key={k}>
                             <div className="card">
@@ -25,7 +25,7 @@ const Cart = () => {
                         </div>
                     ))}
                 </div>
-                <h2>Actors</h2>
+                <h2 class="text-center mt-4 mb-4">Actors</h2>
                 <div className="row">
                     {acto && acto.map((e, k) => (
                         <div className="col-md-4 mb-4" key={k}>
