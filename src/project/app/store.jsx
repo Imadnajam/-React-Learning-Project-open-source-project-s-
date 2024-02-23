@@ -9,7 +9,9 @@ const reducer = (state = initialState, { type, payload }) => {
         case 'removeItem':
             return { ...state, Films: [...state.Films.filter((e) => e !== payload)] }
         case 'addActor':
-            return state
+            return {
+                ...state, Artists: [...state.Artists, payload]
+            };
         
         default :
             return state;
