@@ -4,12 +4,9 @@ import Fil from './films';
 import Cart from "./cart";
 import Act from './actors'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 export default function Header() {
     return (
-        <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <><nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
                     <Link className="navbar-brand" to="/">Home</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +27,6 @@ export default function Header() {
                     </div>
                 </div>
             </nav>
-
             <Routes>
                 <Route path="/" />
                 <Route path="/films" element={<Fil />} />
@@ -40,3 +36,5 @@ export default function Header() {
         </>
     )
 }
+
+
