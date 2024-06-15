@@ -1,11 +1,13 @@
-import React from 'react'
-import M from './components/MiniCalcule'
-const App = () => {
-  return (
-    <div>
-      <M/>
-    </div>
-  )
-}
+import React from 'react';
+import Hi from './practis/Hi';
 
-export default App
+
+export default function App() {
+  return (
+
+    <>
+      <Hi />
+    </>
+  )
+ 
+}
