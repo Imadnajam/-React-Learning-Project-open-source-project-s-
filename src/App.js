@@ -1,5 +1,5 @@
 import React from 'react';
-import Hi from './practis/Hi';
+import Hi from './practis/Stars';
 
 
 export default function App() {
