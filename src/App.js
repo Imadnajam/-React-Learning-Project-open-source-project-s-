@@ -2,7 +2,9 @@ import { React, useState } from 'react';
 import axios from 'axios';
 import StarsC from './practis/Stars';
 import StarsFC from './practis/FindStart';
+
 import { Routes, Route, Link } from 'react-router-dom';
+import AddStars from './practis/addStar';
 
 export default function App() {
   const [stars, setStars] = useState([]);
@@ -16,11 +18,15 @@ export default function App() {
     <>
       <Link to={"/stars"}>stars</Link>
       <Link to={"/findS"}>Find Stars By Name</Link>
+      <Link to={"/addStar"}>add Star </Link>
+      
 
     <Routes>
       <Route path='/stars' element={<StarsC stars={stars} />} />
-      <Route path='/findS' element={<StarsFC stars={stars} />} />
+        <Route path='/findS' element={<StarsFC stars={stars} />} />
+        <Route path='/addStar' element={<AddStars  />} />
       
+        
       </Routes>
     </>
   )
