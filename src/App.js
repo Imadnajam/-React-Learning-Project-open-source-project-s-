@@ -3,7 +3,7 @@ import axios from 'axios';
 import StarsC from './practis/Stars';
 import StarsFC from './practis/FindStart';
 import { Routes, Route, Link } from 'react-router-dom';
-// 
+
 export default function App() {
   const [stars, setStars] = useState([]);
   const fetApi =async() =>{
