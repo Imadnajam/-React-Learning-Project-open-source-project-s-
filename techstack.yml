@@ -1,0 +1,276 @@
+repo_name: Imadnajam/-React-Learning-Project-open-source-project-s-
+report_id: 508c695e23a8d87f38297abf65083ee7
+version: 0.1
+repo_type: Public
+timestamp: '2024-05-03T16:54:46+00:00'
+requested_by: Imadnajam
+provider: github
+branch: master
+detected_tools_count: 20
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-
+  detection_source: Repo Metadata
+- name: Bootstrap
+  description: Simple and flexible HTML, CSS, and JS for popular UI components and
+    interactions
+  website_url: http://getbootstrap.com/
+  version: 5.3.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/1101/C9QJ7V3X.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-02-18 12:41:37.000000000 Z
+- name: React
+  description: A JavaScript library for building user interfaces
+  website_url: https://reactjs.org/
+  version: 18.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
+- name: React Router
+  description: A complete routing solution for React.js
+  website_url: https://github.com/rackt/react-router
+  version: 6.15.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: JavaScript Framework Components
+  image_url: https://img.stackshare.io/service/3350/8261421.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
+- name: Redux
+  description: Predictable state container for JavaScript apps
+  website_url: https://redux.js.org/
+  version: 5.0.1
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: State Management Library
+  image_url: https://img.stackshare.io/service/4074/13142323.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/.github/workflows/sonarqube.yml
+  detection_source: ".github/workflows/sonarqube.yml"
+  last_updated_by: toto09444
+  last_updated_on: 2023-11-10 10:40:04.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package.json
+  detection_source: package.json
+  last_updated_by: Imadnajam
+  last_updated_on: 2023-11-05 21:55:15.000000000 Z
+- name: axios
+  description: Promise based HTTP client for the browser and node.js
+  website_url: https://github.com/mzabriskie/axios
+  version: 1.6.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-02-09 16:54:16.000000000 Z
+- name: "@fortawesome/fontawesome-svg-core"
+  description: The iconic font, CSS, and SVG framework
+  package_url: https://www.npmjs.com/@fortawesome/fontawesome-svg-core
+  version: 6.4.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16644/default_50c9ed1615a25628505ab53def64d82450ced26b.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: Imadnajam
+  last_updated_on: 2023-11-05 21:55:15.000000000 Z
+- name: "@fortawesome/free-solid-svg-icons"
+  description: The iconic font, CSS, and SVG framework
+  package_url: https://www.npmjs.com/@fortawesome/free-solid-svg-icons
+  version: 6.4.2
+  license: CC-BY-4.0,MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16683/default_6dad4e42e12d47cc6edfbdea036dae12f91abebb.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: Imadnajam
+  last_updated_on: 2023-11-05 21:55:15.000000000 Z
+- name: "@fortawesome/react-fontawesome"
+  description: Official React component for Font Awesome 5
+  package_url: https://www.npmjs.com/@fortawesome/react-fontawesome
+  version: 0.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16936/default_277303773c2bdb575ee8f4bfe869f0a33d6755b2.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
+- name: "@testing-library/jest-dom"
+  description: Custom jest matchers to test the state of the DOM
+  package_url: https://www.npmjs.com/@testing-library/jest-dom
+  version: 5.17.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17424/default_1cdcda15ebb7caed879f8340bc212b44c4ec9dac.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: Imadnajam
+  last_updated_on: 2023-11-05 21:55:15.000000000 Z
+- name: "@testing-library/react"
+  description: Simple and complete React DOM testing utilities that encourage good
+    testing practices
+  package_url: https://www.npmjs.com/@testing-library/react
+  version: 13.4.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16549/default_d522554c6a41cb28d922d6d3ad32ad4afa0e3bb5.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
+- name: react-dom
+  description: React package for working with the DOM
+  package_url: https://www.npmjs.com/react-dom
+  version: 18.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
+- name: react-icons
+  description: SVG React icons of popular icon packs using ES6 imports
+  package_url: https://www.npmjs.com/react-icons
+  version: 4.10.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16909/default_7b9968788548874538c601457e8dcd9c74bd2051.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
+- name: react-redux
+  description: Official React bindings for Redux
+  package_url: https://www.npmjs.com/react-redux
+  version: 9.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15984/default_f49d4c116f8ea0155f4d92673b084378bba02760.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
+- name: react-router-dom
+  description: DOM bindings for React Router
+  package_url: https://www.npmjs.com/react-router-dom
+  version: 6.15.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16025/default_e25d1fbb04a118c79fb444294461417342bd03bf.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
+- name: react-scripts
+  description: Configuration and scripts for Create React App
+  package_url: https://www.npmjs.com/react-scripts
+  version: 5.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15985/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: https://github.com/Imadnajam/-React-Learning-Project-open-source-project-s-/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: imadnajam
+  last_updated_on: 2024-01-21 18:35:13.000000000 Z
