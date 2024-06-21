@@ -9,32 +9,32 @@ import GestionMateriel from './practis/GestionMateriel';
 
 export default function App() {
   const [stars, setStars] = useState([]);
-  const fetApi =async() =>{
+  const fetApi = async () => {
     const response = await axios.get("https://api.themoviedb.org/3/person/popular?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d");
     setStars(response.data.results)
   }
   fetApi()
-   
+
   return (
     <>
       <Link to={"/stars"}>stars</Link>
       <Link to={"/findS"}>Find Stars By Name</Link>
       <Link to={"/addStar"}>add Star </Link>
       <Link to={"/Materiel"}>Gestion Materiel</Link>
-      
 
-    <Routes>
-      <Route path='/stars' element={<StarsC stars={stars} />} />
+
+      <Routes>
+        <Route path='/stars' element={<StarsC stars={stars} />} />
         <Route path='/findS' element={<StarsFC stars={stars} />} />
         <Route path='/addStar' element={<AddStars />} />
-        <Route path='/Materiel' element={<GestionMateriel /> } />
-        
-      
-        
+        <Route path='/Materiel' element={<GestionMateriel />} />
+
+
+
       </Routes>
     </>
   )
- 
+
 }
 
 
