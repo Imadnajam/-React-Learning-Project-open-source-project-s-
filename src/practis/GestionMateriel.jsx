@@ -13,6 +13,9 @@ const GestionMateriel = () => {
         e.preventDefault();
         setData([...data, { marque: marque, datedebut: dateD, categorie: categorie, codeMateriel: codeMateriel }]);
     }
+    function removeMateriel(e) {
+        setData(data.filter(el => el !== e));
+    }
 
     return (
 
@@ -45,6 +48,7 @@ const GestionMateriel = () => {
                             <li>code Materiel  :{e.codeMateriel}  </li>
                             <li>La marque :{e.marque}  </li>
                             <li>Date de L ' utulisation  :{e.datedebut}  </li>
+                            <li><button onClick={() => removeMateriel(e)}> Remove</button></li>
                         </ul>
                     ))
                 ) : (
