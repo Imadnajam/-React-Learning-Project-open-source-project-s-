@@ -7,8 +7,10 @@ import { Routes, Route, Link } from 'react-router-dom';
 import AddStars from './practis/addStar';
 import GestionMateriel from './practis/GestionMateriel';
 import CRUD from './practis/CRUD';
+import { useSelector } from 'react-redux';
 
 export default function App() {
+  const Livres = useSelector((state) => state.Data);
   const [stars, setStars] = useState([]);
   const fetApi = async () => {
     const response = await axios.get("https://api.themoviedb.org/3/person/popular?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d");

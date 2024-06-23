@@ -1,12 +1,10 @@
 import { createStore } from "redux";
 
 
-const initialeState = {
-    Data: [{
+const initialeState = 
+    {
         Livre: '',
         Auteur: ''
-    }
-    ]
 };
 
 const reducer = (State = initialeState, { type, payload })=> {
