@@ -8,6 +8,8 @@ import AddStars from './practis/addStar';
 import GestionMateriel from './practis/GestionMateriel';
 import CRUD from './practis/CRUD';
 import { useSelector } from 'react-redux';
+import ADLivre from './practis/AjoutLivre';
+import LisLivre from './practis/ListeLivres';
 
 export default function App() {
   const Livres = useSelector((state) => state.Data);
@@ -25,6 +27,7 @@ export default function App() {
       <Link to={"/addStar"}>add Star </Link>
       <Link to={"/Materiel"}>Gestion Materiel</Link>
       <Link to={'/CRUD'}> CRUD STARS</Link>
+      <Link to={'/Bibliotheque'}> GEstiont Livres</Link>
 
 
       <Routes>
@@ -34,6 +37,11 @@ export default function App() {
         <Route path='/addStar' element={<AddStars />} />
         <Route path='/Materiel' element={<GestionMateriel />} />
 
+        <Route path='/Bibliotheque' element={<div>
+          <ADLivre />
+          <LisLivre Livres={Livres}/>
+        </div>} />
+        
         
 
 
