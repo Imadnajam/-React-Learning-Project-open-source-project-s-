@@ -39,7 +39,7 @@ export default function App() {
 
         <Route path='/Bibliotheque' element={<div>
           <ADLivre />
-          <LisLivre Livres={Livres}/>
+          <LisLivre Livresd={Livres}/>
         </div>} />
         
         

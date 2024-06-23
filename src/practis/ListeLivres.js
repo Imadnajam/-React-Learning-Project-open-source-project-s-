@@ -1,22 +1,21 @@
 
-const ListeLivre = ({Livres}) => {
+const ListeLivre = ({ Livresd }) => {
     
 
     return (
         <div>
 
-            
             {
-                Livres.length >0? (
-            
-                    Livres.map((e) => (
-                        <li>Livre : {e.Livre} / Auteur : {e.Auteur }</li>
+                Livresd && Livresd.length > 0 ? (
+                    Livresd.map((e) => (
+                        <li key={e.Livre}>Livre: {e.Livre} / Auteur: {e.Auteur}</li>
                     ))
-                
-                ): (
-                        <h3> we dont have any Book</h3>
+                ) : (
+                    <h3>We don't have any books</h3>
                 )
             }
+
+
         </div>
     )
 }

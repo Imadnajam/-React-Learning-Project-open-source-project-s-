@@ -2,9 +2,8 @@ import { createStore } from "redux";
 
 
 const initialeState = 
-    {
-        Livre: '',
-        Auteur: ''
+{
+    Data:[]
 };
 
 const reducer = (State = initialeState, { type, payload })=> {

@@ -20,8 +20,8 @@ const AjoutLivre = () => {
         <div>
             <form onSubmit={addLivre}>
                 
-                Livre : <input type='text' value={livreA} onchange={(e) => setLivre(e.target.value)} />
-                Auteur : <input type='text' value={auteur} onchange={(e)=>setAuteur(e.target.value)} />
+                Livre : <input type='text' value={livreA}  onChange={(e) => setLivre(e.target.value)} />
+                Auteur : <input type='text' value={auteur} onChange={(e)=>setAuteur(e.target.value)} />
 
                 <button type='submit'>Ajouter </button>
             </form>
