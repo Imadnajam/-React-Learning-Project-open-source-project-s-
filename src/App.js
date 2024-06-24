@@ -33,16 +33,16 @@ export default function App() {
       <Routes>
         <Route path='/stars' element={<StarsC stars={stars} />} />
         <Route path='/findS' element={<StarsFC stars={stars} />} />
-        <Route path='/CRUD' element={<CRUD stars={stars} />}/>
+        <Route path='/CRUD' element={<CRUD stars={stars} />} />
         <Route path='/addStar' element={<AddStars />} />
         <Route path='/Materiel' element={<GestionMateriel />} />
 
         <Route path='/Bibliotheque' element={<div>
           <ADLivre />
-          <LisLivre Livresd={Livres}/>
+          <LisLivre Livresd={Livres} />
         </div>} />
-        
-        
+
+
 
 
 
