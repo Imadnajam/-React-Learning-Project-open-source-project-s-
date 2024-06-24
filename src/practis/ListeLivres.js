@@ -15,7 +15,7 @@ const ListeLivre = ({ Livresd }) => {
                     Livresd.map((e) => (
                         <div>
                             <li key={e.Livre}>Livre: {e.Livre} / Auteur: {e.Auteur}</li>
-                            <button onClick={()=>delteOne(e)}>Remove</button>
+                            <button onClick={() => delteOne(e)}>Remove</button>
                         </div>
 
                     ))

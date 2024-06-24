@@ -11,7 +11,7 @@ const AddStars = () => {
     function inserDATA(e) {
         e.preventDefault();
         dispatch({ type: 'addStar', payload: { name: name, age: age, price: price } });
-        setName(''); 
+        setName('');
         setAge('');
         setPrice('');
     }
