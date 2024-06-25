@@ -10,6 +10,9 @@ const reducer = (state = initialeState, { type, payload }) => {
             return {
                 ...state, results: payload.nb1 +payload.nb2
             }
+        case 'Division':
+            return { ...state, results: payload.nb1 - payload.nb2 };
+        
         default:
             return state
     }
