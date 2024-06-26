@@ -4,11 +4,11 @@ const initialeState = { artists: [] };
 
 const reducer = (state = initialeState, { type, payload }) => {
     switch (type) {
-        case 'addStar': 
-          
+        case 'addStar':
+
             return { artists: [...state.artists, payload] };
         case 'removeStar':
-            return { artists:  state.artists.filter((e) => e !== payload) };
+            return { artists: state.artists.filter((e) => e !== payload) };
         default:
             return state
     }
