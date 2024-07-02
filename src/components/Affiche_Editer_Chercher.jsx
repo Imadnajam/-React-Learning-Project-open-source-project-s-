@@ -1,3 +1,9 @@
+/*
+# This workflow helps you trigger a SonarQube analysis of your code and populates
+# GitHub Code Scanning alerts with the vulnerabilities found.
+# (this feature is available starting from SonarQube 9.7, Developer Edition and above)
+
+*/
 import React, { useState } from "react";
 
 const Affiche = () => {
