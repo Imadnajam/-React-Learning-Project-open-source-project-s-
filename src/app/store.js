@@ -8,6 +8,8 @@ const reducer = (state = initialeState, { type, payload }) => {
             return { ...state, color: payload || '', hestoC: [...state.hestoC, payload] }
         case 'ChangeT':
             return { ...state, text: payload, hestoT: [...state.hestoT, payload] }
+            case 'delete':
+            return { ...state, text: payload, hestoT: [...state.hestoT, payload] }
         default:
             return state
     }
