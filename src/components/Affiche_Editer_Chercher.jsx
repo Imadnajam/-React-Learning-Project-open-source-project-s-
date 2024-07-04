@@ -15,12 +15,14 @@ const Affiche = () => {
     id: "",
     nom: "",
     prenom: "",
+    age : "",
   });
    const [listC ,setListC] = useState([
     {
       id: 1,
       nom: "najam",
       prenom: "imad",
+      age:'20'
     },
     {
       id: 2,
