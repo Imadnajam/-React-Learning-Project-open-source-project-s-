@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react'; // Importing necessary React hooks
+import axios from 'axios'; // Importing axios for making API calls
+import { useDispatch } from 'react-redux'; // Importing useDispatch hook from react-redux for dispatching actions
 
-import { useDispatch } from 'react-redux';
+
 
 
 const Films = () => {
