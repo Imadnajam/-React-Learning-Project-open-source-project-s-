@@ -18,8 +18,8 @@ export default store
 
 
 
-
 /*///////////////////// Redux Test  3  MINI Game Number Film////////////////////
+
 
 import { createStore } from "redux";
 
@@ -60,6 +60,7 @@ export default store
 
 
 
+/*///////////////////// Redux Test  3  MINI Game Number Film////////////////////
 
 
 ///////////////////// Redux Test  2  MINI CALCULE////////////////////
