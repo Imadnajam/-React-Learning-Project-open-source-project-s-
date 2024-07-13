@@ -16,6 +16,8 @@ const reducer = (state = initialState, { type, payload }) => {
        
 
 }
-
+/*
 const store = createStore(reducer)
 export default store;
+
+    */
