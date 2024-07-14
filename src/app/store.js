@@ -24,7 +24,15 @@ export default store
 
 
 import { createStore } from "redux";
+.App {
+  text-align: center;
+}
 
+.App-logo {
+  height: 40vmin;
+  
+  pointer-events: none;
+}
 
 const initialeState ={number:0,film :''};
 const reducer =  (state=initialeState,{type,payload})=>{
