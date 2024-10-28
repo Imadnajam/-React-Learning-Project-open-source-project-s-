@@ -4,7 +4,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import Layout from "@theme/Layout";
-
+// Y Combinator the katiy
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
